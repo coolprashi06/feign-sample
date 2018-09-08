@@ -57,9 +57,11 @@ public class Service1Controller {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/createAddress")
-    public Address createAddress(@RequestBody Address address){
+    public Address createAddress(@RequestBody @Valid Address address){
         System.out.println(address.toString());
         System.out.println(address.getLine1());
         return address;
     }
+
+
 }
