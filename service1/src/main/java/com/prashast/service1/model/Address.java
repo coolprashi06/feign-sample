@@ -1,5 +1,6 @@
 package com.prashast.service1.model;
 
+import com.prashast.service1.constraint.ValidateText;
 import lombok.*;
 
 import javax.validation.Valid;
@@ -11,7 +12,7 @@ import java.util.List;
 @EqualsAndHashCode
 public class Address {
 
-    private String line1;
+    @ValidateText("addr1:") private String line1;
     private String line2;
     private String city;
     private String state;
