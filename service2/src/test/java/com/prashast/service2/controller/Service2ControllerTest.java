@@ -35,7 +35,7 @@ public class Service2ControllerTest {
         personList.add(p);
 
         RemoteService1 service1 = Mockito.mock(RemoteService1.class);
-        Mockito.when(service1.getPersons(Mockito.any(Person.class))).thenReturn(personList);
+        //Mockito.when(service1.getPersons(Mockito.any(Person.class))).thenReturn(personList);
 
         Service2Controller controller = new Service2Controller();
         controller.setRemoteService1(service1);
